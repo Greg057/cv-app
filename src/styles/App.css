@@ -1,7 +1,15 @@
 .main-container {
-    width: 100vw;
-    height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 72px;
+}
+
+.main-container, .edit-section {
+    max-width: fit-content;
+}
+
+.resume-section {
+    height: 297mm;
+    width: 210mm;
+    background-color: white;
 }

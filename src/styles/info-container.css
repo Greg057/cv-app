@@ -3,6 +3,7 @@
     padding: 24px;
     border-radius: 12px;
     margin-bottom: 24px;
+    max-width: fit-content;
 }
 
 .info-container h2 {
