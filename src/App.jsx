@@ -1,11 +1,14 @@
 //import { useState } from 'react'
 import './styles/App.css'
+import EditSection from './components/EditSection'
+import ResumeSection from './components/ResumeSection'
 
 function App() {
   return (
-    <>
-      <h2>Hi its me </h2>
-    </>
+    <div className='main-container'>
+      <EditSection />
+      <ResumeSection />
+    </div>
   )
 }
 
