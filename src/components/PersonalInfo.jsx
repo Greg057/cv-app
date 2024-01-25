@@ -1,10 +1,14 @@
 import InputField from "./InputField"
 
+
 export default function PersonalInfo () {
     return (
-        <div className="personal-info">
+        <div className="info-container">
             <h2>Personal Information</h2>
-            <InputField title="Full name" placeholder="First and last name"/>
+            <InputField title="Full Name"/>
+            <InputField title="Email"/>
+            <InputField title="Phone Number"/>
+            <InputField title="Address"/>
         </div>
     )
 }

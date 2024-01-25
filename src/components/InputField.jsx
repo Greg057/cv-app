@@ -1,11 +1,10 @@
+import "../styles/InputField.css"
 
-export default function InputField ({ title, placeholder }) {
+export default function InputField ({ title }) {
     return (
         <div className="input-field">
             <h4>{title}</h4>
-            <form>
-                <input type="text" placeholder={placeholder} />
-            </form>
+            <input type="text" placeholder={"Enter " + title}/>
             
         </div>
     )
