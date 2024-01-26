@@ -5,7 +5,7 @@ import "../styles/info-container.css"
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
-export default function EditSection ({ personalInfo, setPersonalInfo, educationInfo, setEducationInfo, addEducationInfo, experienceInfo, setExperienceInfo }) {
+export default function EditSection ({ personalInfo, setPersonalInfo, educationInfo, setEducationInfo, addEducation, removeEducation, experienceInfo, setExperienceInfo }) {
     const [activeIndex, setActiveIndex] = useState();
 
     function handleClick(id) {
@@ -19,10 +19,11 @@ export default function EditSection ({ personalInfo, setPersonalInfo, educationI
             <div className="info-container">
                 <h2>Education</h2>
                 {educationInfo.map(education => 
-                    <EducationInfo educationInfo={education} key={education.id} id={education.id} setEducationInfo={setEducationInfo} isActive={activeIndex === education.id} handleClick={handleClick}/> )}
+                    <EducationInfo educationInfo={education} key={education.id} id={education.id} setEducationInfo={setEducationInfo} 
+                                    isActive={activeIndex === education.id} handleClick={handleClick} removeEducation={removeEducation} /> )}
                 <button onClick={() => {
                     const newID = uuidv4()
-                    addEducationInfo([
+                    addEducation([
                         ...educationInfo,
                         { id: newID, school:"Enter education or delete", degree:"", startDate: "", endDate:"", location:"" }
                     ])

@@ -9,9 +9,9 @@ export default function App() {
   const [educationInfo, setEducationInfo] = useState(sampleData.educationInfo)
   const [experienceInfo, setExperienceInfo] = useState(sampleData.experienceInfo)
 
-  function handleEducationChange(i, valueToChange, value) {
+  function handleEducationChange(id, valueToChange, value) {
     const nextEducationInfo = educationInfo.map(education => {
-      if (education.id === i) {
+      if (education.id === id) {
         return {
           ...education, [valueToChange]: value
         }
@@ -20,6 +20,11 @@ export default function App() {
       }
     })
     setEducationInfo(nextEducationInfo)
+  }
+
+  function removeEducation (id) {
+      setEducationInfo(educationInfo.filter(education =>
+      education.id !== id))
   }
 
   function handleExperienceChange(i, valueToChange, value) {
@@ -38,7 +43,7 @@ export default function App() {
   return (
     <div className='main-container'>
       <EditSection setPersonalInfo={setPersonalInfo} personalInfo={personalInfo} 
-                    setEducationInfo={handleEducationChange} addEducationInfo={setEducationInfo} educationInfo={educationInfo}
+                    setEducationInfo={handleEducationChange} addEducation={setEducationInfo} removeEducation={removeEducation} educationInfo={educationInfo}
                     setExperienceInfo={handleExperienceChange} experienceInfo={experienceInfo}/>
       <ResumeSection personalInfo={personalInfo} educationInfo={educationInfo} experienceInfo={experienceInfo} />
     </div>
