@@ -42,7 +42,7 @@ export default function App() {
 
   function removeExperience (id) {
     setExperienceInfo(experienceInfo.filter(experience =>
-      experience.id !== id))
+    experience.id !== id))
   }
 
   return (
@@ -54,5 +54,7 @@ export default function App() {
     </div>
   )
 }
+
+
 
 

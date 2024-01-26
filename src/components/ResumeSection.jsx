@@ -4,7 +4,6 @@ import "../styles/resume-section.css"
 
 export default function ResumeSection ({ personalInfo, educationInfo, experienceInfo }) {
     
-
     return (
         <div className="resume-section">
             <div className="top-section">
