@@ -1,6 +1,6 @@
 export default function ExperienceSection ({ experienceInfo }) {
     return (
-        <div className="experience-item" key={experienceInfo.id}>
+        <div className="resume-item" key={experienceInfo.id}>
             <div>
                 <div>{experienceInfo.companyName}</div>
                 <div>{experienceInfo.positionTitle}</div>

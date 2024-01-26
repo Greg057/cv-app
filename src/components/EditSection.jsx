@@ -33,7 +33,7 @@ export default function EditSection ({ personalInfo, setPersonalInfo, educationI
                         { id: newID, school:"Enter education or delete", degree:"", startDate: "", endDate:"", location:"" }
                     ])
                     setActiveIndexEducation(newID)
-                }}>Add Education</button>
+                }}><span className="material-symbols-outlined">add_circle</span>Add Education</button>
             </div>
 
             <div className="info-container">
@@ -48,7 +48,7 @@ export default function EditSection ({ personalInfo, setPersonalInfo, educationI
                         { id: newID, companyName:"Enter experience or delete", positionTitle:"", startDate: "", endDate:"", location:"", description: "" }
                     ])
                     setActiveIndexExperience(newID)
-                }}>Add Experience</button>
+                }}><span className="material-symbols-outlined">add_circle</span>Add Experience</button>
             </div>
 
             

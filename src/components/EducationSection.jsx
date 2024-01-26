@@ -2,14 +2,14 @@
 
 export default function EducationSection ({ educationInfo }) {
     return (
-        <div className="education-item" key={educationInfo.id}>
+        <div className="resume-item" key={educationInfo.id}>
             <div>
-                <div>{educationInfo.school}</div>
+                <div style={{fontWeight: 600}}>{educationInfo.school}<span style={{fontStyle: "italic", fontWeight: 400}}> - {educationInfo.location}</span></div>
                 <div>{educationInfo.degree}</div>
             </div>
             <div>
-                <div>{educationInfo.startDate} - {educationInfo.endDate}</div>
-                <div>{educationInfo.location}</div>
+                <div style={{fontStyle: "italic"}}>{educationInfo.startDate} - {educationInfo.endDate}</div>
+                
             </div>
         </div>
     )
