@@ -5,11 +5,16 @@ import "../styles/info-container.css"
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
-export default function EditSection ({ personalInfo, setPersonalInfo, educationInfo, setEducationInfo, addEducation, removeEducation, experienceInfo, setExperienceInfo }) {
-    const [activeIndex, setActiveIndex] = useState();
+export default function EditSection ({ personalInfo, setPersonalInfo, educationInfo, setEducationInfo, addEducation, removeEducation, experienceInfo, setExperienceInfo, addExperience, removeExperience }) {
+    const [activeIndexEducation, setActiveIndexEducation] = useState();
+    const [activeIndexExperience, setActiveIndexExperience] = useState();
 
-    function handleClick(id) {
-        activeIndex === id ? setActiveIndex() : setActiveIndex(id)
+    function handleClickEducation(id) {
+        activeIndexEducation === id ? setActiveIndexEducation() : setActiveIndexEducation(id)
+    }
+
+    function handleClickExperience(id) {
+        activeIndexExperience === id ? setActiveIndexExperience() : setActiveIndexExperience(id)
     }
 
     return (
@@ -20,19 +25,33 @@ export default function EditSection ({ personalInfo, setPersonalInfo, educationI
                 <h2>Education</h2>
                 {educationInfo.map(education => 
                     <EducationInfo educationInfo={education} key={education.id} id={education.id} setEducationInfo={setEducationInfo} 
-                                    isActive={activeIndex === education.id} handleClick={handleClick} removeEducation={removeEducation} /> )}
+                                    isActive={activeIndexEducation === education.id} handleClick={handleClickEducation} removeEducation={removeEducation} /> )}
                 <button onClick={() => {
                     const newID = uuidv4()
                     addEducation([
                         ...educationInfo,
                         { id: newID, school:"Enter education or delete", degree:"", startDate: "", endDate:"", location:"" }
                     ])
-                    setActiveIndex(newID)
+                    setActiveIndexEducation(newID)
                 }}>Add Education</button>
             </div>
 
-            {experienceInfo.map(experience => 
-                <ExperienceInfo experienceInfo={experience} key={experience.id} id={experience.id} setExperienceInfo={setExperienceInfo}/> )}
+            <div className="info-container">
+                <h2>Experience</h2>
+                {experienceInfo.map(experience => 
+                    <ExperienceInfo experienceInfo={experience} key={experience.id} id={experience.id} setExperienceInfo={setExperienceInfo}
+                                    isActive={activeIndexExperience === experience.id} handleClick={handleClickExperience} removeExperience={removeExperience} /> )}
+                <button onClick={() => {
+                    const newID = uuidv4()
+                    addExperience([
+                        ...experienceInfo,
+                        { id: newID, companyName:"Enter experience or delete", positionTitle:"", startDate: "", endDate:"", location:"", description: "" }
+                    ])
+                    setActiveIndexExperience(newID)
+                }}>Add Experience</button>
+            </div>
+
+            
         </div>
     )
 }

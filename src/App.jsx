@@ -27,9 +27,9 @@ export default function App() {
       education.id !== id))
   }
 
-  function handleExperienceChange(i, valueToChange, value) {
+  function handleExperienceChange(id, valueToChange, value) {
     const nextExperienceInfo = experienceInfo.map(experience => {
-      if (experience.id === i) {
+      if (experience.id === id) {
         return {
           ...experience, [valueToChange]: value
         }
@@ -40,11 +40,16 @@ export default function App() {
     setExperienceInfo(nextExperienceInfo)
   }
 
+  function removeExperience (id) {
+    setExperienceInfo(experienceInfo.filter(experience =>
+      experience.id !== id))
+  }
+
   return (
     <div className='main-container'>
       <EditSection setPersonalInfo={setPersonalInfo} personalInfo={personalInfo} 
                     setEducationInfo={handleEducationChange} addEducation={setEducationInfo} removeEducation={removeEducation} educationInfo={educationInfo}
-                    setExperienceInfo={handleExperienceChange} experienceInfo={experienceInfo}/>
+                    setExperienceInfo={handleExperienceChange} addExperience={setExperienceInfo} removeExperience={removeExperience} experienceInfo={experienceInfo}/>
       <ResumeSection personalInfo={personalInfo} educationInfo={educationInfo} experienceInfo={experienceInfo} />
     </div>
   )
