@@ -5,7 +5,7 @@ const sampleData = {
     educationInfo:
     [
         {id: 0, school: "MIT University", degree: "Bachelor's Degree in Computer Science", startDate: "08/2020", endDate: "07/2024", location: "New York City, US"}, 
-        {id: 1, school: "MIT University", degree: "Master's Degree in Computer Science", startDate: "09/2024", endDate: "present", location: "Boston, US"}
+        {id: 1, school: "Harvard University", degree: "Master's Degree in Computer Science", startDate: "09/2024", endDate: "present", location: "Boston, US"}
     ],
 
     experienceInfo:

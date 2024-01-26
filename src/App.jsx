@@ -8,7 +8,7 @@ export default function App() {
   const [personalInfo, setPersonalInfo] = useState(sampleData.personalInfo)
   const [educationInfo, setEducationInfo] = useState(sampleData.educationInfo)
   const [experienceInfo, setExperienceInfo] = useState(sampleData.experienceInfo)
-  
+
   function handleEducationChange(i, valueToChange, value) {
     const nextEducationInfo = educationInfo.map(education => {
       if (education.id === i) {
@@ -38,7 +38,7 @@ export default function App() {
   return (
     <div className='main-container'>
       <EditSection setPersonalInfo={setPersonalInfo} personalInfo={personalInfo} 
-                    setEducationInfo={handleEducationChange} educationInfo={educationInfo}
+                    setEducationInfo={handleEducationChange} addEducationInfo={setEducationInfo} educationInfo={educationInfo}
                     setExperienceInfo={handleExperienceChange} experienceInfo={experienceInfo}/>
       <ResumeSection personalInfo={personalInfo} educationInfo={educationInfo} experienceInfo={experienceInfo} />
     </div>
