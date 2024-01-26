@@ -3,7 +3,7 @@ import EducationInfo from "./EducationInfo"
 import ExperienceInfo from "./ExperienceInfo"
 import "../styles/info-container.css"
 import { useState } from "react";
-import uniqid from 'uniqid';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function EditSection ({ personalInfo, setPersonalInfo, educationInfo, setEducationInfo, addEducationInfo, experienceInfo, setExperienceInfo }) {
     const [activeIndex, setActiveIndex] = useState();
@@ -21,7 +21,7 @@ export default function EditSection ({ personalInfo, setPersonalInfo, educationI
                 {educationInfo.map(education => 
                     <EducationInfo educationInfo={education} key={education.id} id={education.id} setEducationInfo={setEducationInfo} isActive={activeIndex === education.id} handleClick={handleClick}/> )}
                 <button onClick={() => {
-                    const newID = uniqid()
+                    const newID = uuidv4()
                     addEducationInfo([
                         ...educationInfo,
                         { id: newID, school:"Enter education or delete", degree:"", startDate: "", endDate:"", location:"" }
