@@ -18,7 +18,7 @@ export default function ExperienceInfo ({ experienceInfo, id, setExperienceInfo,
                         <button className="close" onClick={() => handleClick(id)}><span className="material-symbols-outlined">close</span>Close</button>
                     </div>
                 </>
-                : <h3>{experienceInfo.companyName}</h3>}
+                : <h4>{experienceInfo.companyName}</h4>}
             </div>
         </div>
     )

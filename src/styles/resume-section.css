@@ -3,12 +3,14 @@
 }
 
 .resume-section h1 {
+    letter-spacing: 1px;
     margin: 0 0 8px 0;
 }
 
 .resume-section h3 {
-    margin: 0 0 16px 0;
+    margin: 0;
     font-size: 22px;
+    letter-spacing: 1px;
 }
 
 .top-section {
@@ -39,11 +41,13 @@
     
 }
 
-
-.resume-item {
+.item-title {
     display: flex;
     justify-content: space-between;
-    gap: 24px;
-    margin-bottom: 12px;
+}
+
+
+.resume-item {
+    margin-top: 26px;
 }
 

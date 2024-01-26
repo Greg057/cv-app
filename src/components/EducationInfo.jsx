@@ -18,7 +18,7 @@ export default function EducationInfo ({ educationInfo, id, setEducationInfo, is
                     </div>
                     
                 </>
-                : <h3>{educationInfo.school}</h3>}
+                : <h4>{educationInfo.school}</h4>}
             </div>
         </div>
     )
