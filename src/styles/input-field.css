@@ -12,3 +12,14 @@
     background-color: var(--background-color);
     border-radius: 12px;
 }
+
+textarea {
+    min-width: fit-content;
+    width: 450px;
+    border: none;
+    padding: 6px 18px;
+    background-color: var(--background-color);
+    border-radius: 12px;
+    font-family: Poppins;
+    resize: vertical;
+}
