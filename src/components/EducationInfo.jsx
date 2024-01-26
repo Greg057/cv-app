@@ -12,8 +12,11 @@ export default function EducationInfo ({ educationInfo, id, setEducationInfo, is
                     <InputField title="Start date" info={educationInfo} valueToChange="startDate" id={id} setFunction={setEducationInfo} />
                     <InputField title="End date" info={educationInfo} valueToChange="endDate" id={id} setFunction={setEducationInfo} />
                     <InputField title="Location" info={educationInfo} valueToChange="location" id={id} setFunction={setEducationInfo} />
-                    <button onClick={() => handleClick(id)}><span className="material-symbols-outlined">close</span>Close</button>
-                    <button onClick={() => removeEducation(id)}><span className="material-symbols-outlined">delete</span>delete</button>
+                    <div className="edit-buttons">
+                        <button onClick={() => removeEducation(id)}><span className="material-symbols-outlined">delete</span>Delete</button>
+                        <button className="close" onClick={() => handleClick(id)}><span className="material-symbols-outlined">close</span>Close</button>
+                    </div>
+                    
                 </>
                 : <h3>{educationInfo.school}</h3>}
             </div>

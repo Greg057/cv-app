@@ -26,7 +26,7 @@ export default function EditSection ({ personalInfo, setPersonalInfo, educationI
                 {educationInfo.map(education => 
                     <EducationInfo educationInfo={education} key={education.id} id={education.id} setEducationInfo={setEducationInfo} 
                                     isActive={activeIndexEducation === education.id} handleClick={handleClickEducation} removeEducation={removeEducation} /> )}
-                <button onClick={() => {
+                <button className="add-button" onClick={() => {
                     const newID = uuidv4()
                     addEducation([
                         ...educationInfo,
@@ -41,7 +41,7 @@ export default function EditSection ({ personalInfo, setPersonalInfo, educationI
                 {experienceInfo.map(experience => 
                     <ExperienceInfo experienceInfo={experience} key={experience.id} id={experience.id} setExperienceInfo={setExperienceInfo}
                                     isActive={activeIndexExperience === experience.id} handleClick={handleClickExperience} removeExperience={removeExperience} /> )}
-                <button onClick={() => {
+                <button className="add-button" onClick={() => {
                     const newID = uuidv4()
                     addExperience([
                         ...experienceInfo,

@@ -14,12 +14,38 @@
     border-bottom: 4px solid var(--background-color);
 }
 
+.edit-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 18px 0;
+}
+
 .edit-item button {
-    background-color: white;
-    border: none;
+    background-color: var(--background-color);
+    color: rgb(185, 4, 4);
+    border: 2px solid rgb(185, 4, 4);
     border-radius: 8px;
     display: flex;
     align-items: center;
     gap: 8px;
-    
+    padding: 6px 12px;
+    font-weight: 700;
+}
+
+.edit-item .close {
+    color: black;
+    font-weight: 400;
+}
+
+.add-button {
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 18px;
+    border: 3px solid gray;
+    width: 150px;
+    border-radius: 36px;
+    display: flex;
+    align-items: center;
+    padding: 6px;
 }

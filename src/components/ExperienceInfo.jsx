@@ -13,8 +13,10 @@ export default function ExperienceInfo ({ experienceInfo, id, setExperienceInfo,
                     <InputField title="End Date" info={experienceInfo} valueToChange="endDate" id={id} setFunction={setExperienceInfo} />
                     <InputField title="Location" info={experienceInfo} valueToChange="location" id={id} setFunction={setExperienceInfo} />
                     <InputField title="Description" info={experienceInfo} valueToChange="description" id={id} setFunction={setExperienceInfo} />
-                    <button onClick={() => handleClick(id)}>Close</button>
-                    <button onClick={() => removeExperience(id)}>delete</button>
+                    <div className="edit-buttons">
+                        <button onClick={() => removeExperience(id)}><span className="material-symbols-outlined">delete</span>Delete</button>
+                        <button className="close" onClick={() => handleClick(id)}><span className="material-symbols-outlined">close</span>Close</button>
+                    </div>
                 </>
                 : <h3>{experienceInfo.companyName}</h3>}
             </div>
