@@ -1,7 +1,7 @@
 import EducationSection from "./EducationSection"
 import "../styles/resume-section.css"
 
-export default function ResumeSection ({ personalInfo }) {
+export default function ResumeSection ({ personalInfo, educationInfo }) {
     
 
     return (
@@ -15,7 +15,8 @@ export default function ResumeSection ({ personalInfo }) {
                 </div>
             </div>
             <h3>Education</h3>
-            <EducationSection />
+            {educationInfo.map(education => 
+                <EducationSection educationInfo={education} key={education.id}/> )}
         </div>
     )
 }

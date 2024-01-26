@@ -1,14 +1,15 @@
+/* eslint-disable react/no-unescaped-entities */
 
-export default function EducationSection () {
+export default function EducationSection ({ educationInfo }) {
     return (
-        <div className="education-item">
+        <div className="education-item" key={educationInfo.id}>
             <div>
-                <div>08/2020 - present</div>
-                <div>New York City, US</div>
+                <div>{educationInfo.school}</div>
+                <div>{educationInfo.degree}</div>
             </div>
             <div>
-                <div>MIT University</div>
-                <div>Bachelor\´s Degree in Computer Science</div>
+                <div>{educationInfo.startDate} - {educationInfo.endDate}</div>
+                <div>{educationInfo.location}</div>
             </div>
         </div>
     )
