@@ -1,4 +1,5 @@
-
+import EducationSection from "./EducationSection"
+import "../styles/resume-section.css"
 
 export default function ResumeSection ({ personalInfo }) {
     
@@ -13,6 +14,8 @@ export default function ResumeSection ({ personalInfo }) {
                     <h6>{personalInfo.address}</h6>
                 </div>
             </div>
+            <h3>Education</h3>
+            <EducationSection />
         </div>
     )
 }

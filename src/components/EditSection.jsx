@@ -1,6 +1,6 @@
 import PersonalInfo from "./PersonalInfo"
-import EducationInfo from "./Educationinfo"
-import ExperienceInfo from "./Experienceinfo"
+import EducationInfo from "./EducationInfo"
+import ExperienceInfo from "./ExperienceInfo"
 import "../styles/info-container.css"
 
 
