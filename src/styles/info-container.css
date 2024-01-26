@@ -9,3 +9,7 @@
 .info-container h2 {
     margin: 0;
 }
+
+.edit-item {
+    border-bottom: 2px solid var(--background-color) 
+}
