@@ -1,5 +1,3 @@
-import "../styles/input-field.css"
-
 export default function InputField ({ title, info, setFunction, valueToChange, id = false, textArea = false }) {
     return (
         <div className="input-field">

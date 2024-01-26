@@ -1,7 +1,7 @@
 import PersonalInfo from "./PersonalInfo"
 import EducationInfo from "./EducationInfo"
 import ExperienceInfo from "./ExperienceInfo"
-import "../styles/info-container.css"
+import "../styles/edit-section.css"
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
