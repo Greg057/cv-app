@@ -1,16 +1,16 @@
 
 
-export default function ResumeSection ({ fullName, email, phoneNumber, address }) {
+export default function ResumeSection ({ personalInfo }) {
     
 
     return (
         <div className="resume-section">
             <div className="top-section">
-                <h1>{fullName}</h1>
+                <h1>{personalInfo.fullName}</h1>
                 <div>
-                    <h6>{email}</h6>
-                    <h6>{phoneNumber}</h6>
-                    <h6>{address}</h6>
+                    <h6>{personalInfo.email}</h6>
+                    <h6>{personalInfo.phoneNumber}</h6>
+                    <h6>{personalInfo.address}</h6>
                 </div>
             </div>
         </div>
