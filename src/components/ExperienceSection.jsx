@@ -5,7 +5,7 @@ export default function ExperienceSection ({ experienceInfo }) {
                 <div style={{fontWeight: 600}}>{experienceInfo.companyName}<span style={{fontStyle: "italic", fontWeight: 400}}> - {experienceInfo.location}</span></div>
                 <div>{experienceInfo.startDate} - {experienceInfo.endDate}</div>
             </div>
-            <div style={{marginBottom: "8px"}}>{experienceInfo.positionTitle}</div>
+            <div style={{marginBottom: "8px", fontWeight: 500}}>{experienceInfo.positionTitle}</div>
             <div style={{textAlign: "justify"}}>{experienceInfo.description}</div>
         </div>
     )
