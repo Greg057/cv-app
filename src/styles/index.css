@@ -1,6 +1,11 @@
 :root {
   --background-color: #f3f0f0;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+
+button {
+  font-family: Poppins;
 }
 
 body {

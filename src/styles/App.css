@@ -1,11 +1,8 @@
 .main-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 72px;
-}
-
-.main-container, .edit-section {
-    max-width: fit-content;
+    margin-top: 24px;
 }
 
 .resume-section {

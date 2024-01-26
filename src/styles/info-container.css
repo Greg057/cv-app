@@ -3,7 +3,7 @@
     padding: 24px;
     border-radius: 12px;
     margin-bottom: 24px;
-    max-width: fit-content;
+    min-width: fit-content;
 }
 
 .info-container h2 {
@@ -11,5 +11,15 @@
 }
 
 .edit-item {
-    border-bottom: 4px solid var(--background-color) 
+    border-bottom: 4px solid var(--background-color);
+}
+
+.edit-item button {
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
 }

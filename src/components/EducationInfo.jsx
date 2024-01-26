@@ -12,8 +12,8 @@ export default function EducationInfo ({ educationInfo, id, setEducationInfo, is
                     <InputField title="Start date" info={educationInfo} valueToChange="startDate" id={id} setFunction={setEducationInfo} />
                     <InputField title="End date" info={educationInfo} valueToChange="endDate" id={id} setFunction={setEducationInfo} />
                     <InputField title="Location" info={educationInfo} valueToChange="location" id={id} setFunction={setEducationInfo} />
-                    <button onClick={() => handleClick(id)}>Close</button>
-                    <button onClick={() => removeEducation(id)}>delete</button>
+                    <button onClick={() => handleClick(id)}><span className="material-symbols-outlined">close</span>Close</button>
+                    <button onClick={() => removeEducation(id)}><span className="material-symbols-outlined">delete</span>delete</button>
                 </>
                 : <h3>{educationInfo.school}</h3>}
             </div>
