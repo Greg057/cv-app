@@ -1,11 +1,12 @@
-import PersonalInfo from "./PersonalInfo"
-import EducationInfo from "./EducationInfo"
-import ExperienceInfo from "./ExperienceInfo"
+import PersonalInfo from "./edit_section/PersonalInfo"
+import EducationInfo from "./edit_section/EducationInfo"
+import ExperienceInfo from "./edit_section/ExperienceInfo"
 import "../styles/edit-section.css"
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
-export default function EditSection ({ personalInfo, setPersonalInfo, educationInfo, setEducationInfo, addEducation, removeEducation, experienceInfo, setExperienceInfo, addExperience, removeExperience }) {
+export default function EditSection ({ personalInfo, setPersonalInfo, educationInfo, setEducationInfo, addEducation, removeEducation, 
+                                                                    experienceInfo, setExperienceInfo, addExperience, removeExperience }) {
     const [activeIndexEducation, setActiveIndexEducation] = useState();
     const [activeIndexExperience, setActiveIndexExperience] = useState();
     const [activeContainer, setActiveContainer] = useState("personal");
@@ -25,7 +26,7 @@ export default function EditSection ({ personalInfo, setPersonalInfo, educationI
     return (
         <div className="edit-section">
             <div className="info-container">
-                <div className="info-container-header" onClick={() => handleClickContainer("personal")}>
+                <div className="info-container-header" onClick={() => {handleClickContainer("personal")}}>
                     <h2>Personal Information</h2>
                     <div className="material-symbols-outlined">expand_more</div>
                 </div>
@@ -69,8 +70,6 @@ export default function EditSection ({ personalInfo, setPersonalInfo, educationI
                 }}><span className="material-symbols-outlined">add_circle</span>Add Experience</button>
                 }
             </div>
-
-            
         </div>
     )
 }

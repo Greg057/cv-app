@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-
 export default function EducationSection ({ educationInfo }) {
     return (
         <div className="resume-item" key={educationInfo.id}>

@@ -1,6 +1,5 @@
 import InputField from "./InputField"
 
-
 export default function PersonalInfo ({ personalInfo, setPersonalInfo }) {
     return (
         <>

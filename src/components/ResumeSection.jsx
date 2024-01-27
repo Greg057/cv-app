@@ -1,5 +1,5 @@
-import EducationSection from "./EducationSection"
-import ExperienceSection from "./ExperienceSection"
+import EducationSection from "./resume_section/EducationSection"
+import ExperienceSection from "./resume_section/ExperienceSection"
 import "../styles/resume-section.css"
 
 export default function ResumeSection ({ personalInfo, educationInfo, experienceInfo }) {
@@ -15,10 +15,8 @@ export default function ResumeSection ({ personalInfo, educationInfo, experience
                 </div>
             </div>
             <h3>Education</h3>
-            <div className="education-section">
-                {educationInfo.map(education =>
-                    <EducationSection educationInfo={education} key={education.id}/> )}
-            </div>
+            {educationInfo.map(education =>
+                <EducationSection educationInfo={education} key={education.id}/> )}
             <h3>Experience</h3>
             {experienceInfo.map(experience => 
                 <ExperienceSection experienceInfo={experience} key={experience.id}/> )}
