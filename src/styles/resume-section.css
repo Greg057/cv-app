@@ -20,7 +20,7 @@
     flex-direction: column;
 }
 
-.top-section, .education-section {
+.top-section, .resume-container-section {
     padding-bottom: 22px;
     margin-bottom: 22px;
     border-bottom: 2px solid rgba(128, 128, 128, 0.842);

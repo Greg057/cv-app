@@ -14,11 +14,15 @@ export default function ResumeSection ({ personalInfo, educationInfo, experience
                 </div>
             </div>
             <h3>Education</h3>
-            {educationInfo.map(education =>
-                <EducationSection educationInfo={education} key={education.id}/> )}
+            <div className="resume-container-section">
+                {educationInfo.map(education =>
+                    <EducationSection educationInfo={education} key={education.id}/> )}
+            </div>
             <h3>Experience</h3>
-            {experienceInfo.map(experience => 
-                <ExperienceSection experienceInfo={experience} key={experience.id}/> )}
+            <div className="resume-container-section">
+                {experienceInfo.map(experience => 
+                    <ExperienceSection experienceInfo={experience} key={experience.id}/> )}
+            </div>
         </div>
     )
 }
