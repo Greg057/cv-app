@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 72px;
-    margin: 24px 0;
+    margin: 32px;
 }
 
 .resume-section {
