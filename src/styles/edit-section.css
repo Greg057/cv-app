@@ -64,8 +64,9 @@
 }
 
 .input-field input {
-    width: 450px;
-    height: 30px;
+    min-width: 100%;
+    box-sizing: border-box;
+    height: 42px;
     border: none;
     padding: 6px 18px;
     background-color: var(--background-color);
@@ -74,8 +75,8 @@
 }
 
 textarea {
-    min-width: fit-content;
-    width: 450px;
+    min-width: 100%;
+    box-sizing: border-box;
     border: none;
     padding: 6px 18px;
     background-color: var(--background-color);
