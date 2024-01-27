@@ -1,7 +1,6 @@
 import InputField from "./InputField";
 
 export default function EducationInfo ({ educationInfo, id, setEducationInfo, isActive, handleClick, removeEducation }) {
-    
     return (
         <div>
             <div className="edit-item" onClick={() => !isActive && handleClick(id)}>

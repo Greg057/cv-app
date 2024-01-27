@@ -1,7 +1,6 @@
 import InputField from "./InputField";
 
 export default function ExperienceInfo ({ experienceInfo, id, setExperienceInfo, isActive, handleClick, removeExperience }) {
-  
     return (
         <div>
             <div className="edit-item" onClick={() => !isActive && handleClick(id)}>

@@ -8,6 +8,5 @@ export default function PersonalInfo ({ personalInfo, setPersonalInfo }) {
             <InputField title="Phone Number" info={personalInfo} valueToChange="phoneNumber" setFunction={setPersonalInfo}/>
             <InputField title="Address" info={personalInfo} valueToChange="address" setFunction={setPersonalInfo}/>
         </>
-
     )
 }
