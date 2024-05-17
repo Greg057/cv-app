@@ -1,4 +1,4 @@
-# React CV Application
+# React CV Editor
 
 ## Project Overview
 This project is a CV (Curriculum Vitae) Editor built with React. It allows users to create and manage their professional resume through a user-friendly interface. The application demonstrates key React concepts such as component-based architecture, state management, and props.
