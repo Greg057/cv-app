@@ -3,6 +3,9 @@
 ## Project Overview
 This project is a CV (Curriculum Vitae) Editor built with React. It allows users to create and manage their professional resume through a user-friendly interface. The application demonstrates key React concepts such as component-based architecture, state management, and props.
 
+## Deployment
+The project is deployed and accessible online at the following link: [CV Application](https://cv-app-cyan-tau.vercel.app/)
+
 ## Features
 - **General Information Section**: Users can input their name, email, and phone number.
 - **Educational Experience Section**: Users can add details about their educational background, including school name, title of study, and dates of study.
